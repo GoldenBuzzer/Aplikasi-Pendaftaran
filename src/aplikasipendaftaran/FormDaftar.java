@@ -5,6 +5,9 @@
  */
 package aplikasipendaftaran;
 
+import java.sql.Connection;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Mery Chris
@@ -27,6 +30,7 @@ public class FormDaftar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup2 = new javax.swing.ButtonGroup();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -36,14 +40,16 @@ public class FormDaftar extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        jButtonTambah = new javax.swing.JButton();
+        jTextFieldNim = new javax.swing.JTextField();
+        jTextFieldNama = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton1 = new javax.swing.JRadioButton();
-        jTextField5 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jButton2 = new javax.swing.JButton();
+        jTextFieldTelp = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextAreaAlamat = new javax.swing.JTextArea();
+        jButtonDaftar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -88,21 +94,29 @@ public class FormDaftar extends javax.swing.JFrame {
         jLabel14.setText("No. Hp");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 550, 80, 30));
 
-        jTextField4.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        jButtonTambah.setText("Tambah");
+        jButtonTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                jButtonTambahActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 300, 440, 40));
+        getContentPane().add(jButtonTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 310, 90, 30));
 
-        jTextField6.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldNim.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
+        jTextFieldNim.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                jTextFieldNimActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 360, 440, 40));
+        getContentPane().add(jTextFieldNim, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 300, 440, 40));
+
+        jTextFieldNama.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
+        jTextFieldNama.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldNamaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextFieldNama, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 360, 440, 40));
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Teknik Informatika", "Teknik Sipil", "Teknik Elektro", "Akutansi" }));
@@ -113,57 +127,86 @@ public class FormDaftar extends javax.swing.JFrame {
         });
         getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 420, 440, 40));
 
+        buttonGroup2.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
         jRadioButton2.setText("Laki - laki");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 490, 200, -1));
 
+        buttonGroup2.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
         jRadioButton1.setText("Perempuan");
         getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 490, 210, -1));
 
-        jTextField5.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldTelp.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
+        jTextFieldTelp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
+                jTextFieldTelpActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 540, 440, 40));
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 600, 440, 100));
+        getContentPane().add(jTextFieldTelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 540, 440, 40));
 
-        jButton2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jButton2.setText("Daftar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jTextAreaAlamat.setColumns(20);
+        jTextAreaAlamat.setRows(5);
+        jScrollPane2.setViewportView(jTextAreaAlamat);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 600, 440, 110));
+
+        jButtonDaftar.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jButtonDaftar.setText("Daftar");
+        jButtonDaftar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonDaftarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 720, 90, 40));
+        getContentPane().add(jButtonDaftar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 720, 90, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikasipendaftaran/form daftar.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 830));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikasipendaftaran/Gambar/form daftar.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, -1, 830));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+    private void jTextFieldNimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNimActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_jTextFieldNimActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void jTextFieldTelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTelpActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
+    }//GEN-LAST:event_jTextFieldTelpActionPerformed
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+    private void jTextFieldNamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNamaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_jTextFieldNamaActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButtonDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDaftarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonDaftarActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jButtonTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTambahActionPerformed
+        // TODO add your handling code here:
+        try {
+            String sql = "INSERT INTO form VALUES ('"+jTextFieldNim.getText()+"','"+jTextFieldNama.getText()+"','"+jComboBox1.getSelectedItem()+"','"+buttonGroup2.getSelection()+"','"+jTextFieldTelp.getText()+"','"+jTextAreaAlamat.getText()+"')";
+            java.sql.Connection con=(Connection)Koneksi.configDB();
+            java.sql.PreparedStatement pst=con.prepareStatement(sql);
+            pst.execute();
+            JOptionPane.showMessageDialog(null, "Penyimpanan Data Berhasil");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, e.getMessage());
+        }
+    }//GEN-LAST:event_jButtonTambahActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,7 +244,9 @@ public class FormDaftar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JButton jButtonDaftar;
+    private javax.swing.JButton jButtonTambah;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
@@ -215,9 +260,10 @@ public class FormDaftar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextAreaAlamat;
+    private javax.swing.JTextField jTextFieldNama;
+    private javax.swing.JTextField jTextFieldNim;
+    private javax.swing.JTextField jTextFieldTelp;
     // End of variables declaration//GEN-END:variables
 }
