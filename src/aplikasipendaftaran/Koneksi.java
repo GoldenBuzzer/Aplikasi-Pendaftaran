@@ -16,7 +16,7 @@ public class Koneksi {
             String user="root";
             String pass="";
             Class.forName("com.mysql.jdbc.Driver");
-            con =DriverManager.getConnection(url,user,pass);
+            con = DriverManager.getConnection(url,user,pass);
             stm = con.createStatement();
             System.out.println("koneksi berhasil;");
         } catch (Exception e) {
@@ -24,3 +24,4 @@ public class Koneksi {
         }
     }
 }
+

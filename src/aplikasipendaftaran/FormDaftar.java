@@ -7,6 +7,7 @@ package aplikasipendaftaran;
 
 import java.sql.Connection;
 import javax.swing.JOptionPane;
+import aplikasipendaftaran.Config;
 
 /**
  *
@@ -100,7 +101,7 @@ public class FormDaftar extends javax.swing.JFrame {
                 jButtonTambahActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 310, 90, 30));
+        getContentPane().add(jButtonTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 300, 90, 30));
 
         jTextFieldNim.setFont(new java.awt.Font("Segoe UI Semilight", 0, 18)); // NOI18N
         jTextFieldNim.addActionListener(new java.awt.event.ActionListener() {
@@ -184,7 +185,7 @@ public class FormDaftar extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldNamaActionPerformed
 
     private void jButtonDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDaftarActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButtonDaftarActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -198,8 +199,11 @@ public class FormDaftar extends javax.swing.JFrame {
     private void jButtonTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTambahActionPerformed
         // TODO add your handling code here:
         try {
-            String sql = "INSERT INTO form VALUES ('"+jTextFieldNim.getText()+"','"+jTextFieldNama.getText()+"','"+jComboBox1.getSelectedItem()+"','"+buttonGroup2.getSelection()+"','"+jTextFieldTelp.getText()+"','"+jTextAreaAlamat.getText()+"')";
-            java.sql.Connection con=(Connection)Koneksi.configDB();
+            String sql = "INSERT INTO form VALUES ('"+jTextFieldNim.getText()+"','"
+                    +jTextFieldNama.getText()+"','"+jComboBox1.getSelectedItem()
+                    +"','"+buttonGroup2.getSelection()+"','"+jTextFieldTelp.getText()
+                    +"','"+jTextAreaAlamat.getText()+"')";
+            java.sql.Connection con=(Connection)Config.configDB();
             java.sql.PreparedStatement pst=con.prepareStatement(sql);
             pst.execute();
             JOptionPane.showMessageDialog(null, "Penyimpanan Data Berhasil");
