@@ -40,33 +40,18 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         NIM = new javax.swing.JTextField();
         Pass = new javax.swing.JPasswordField();
         jButton2 = new javax.swing.JButton();
+        jButtonHome1 = new javax.swing.JButton();
+        jButtonDaftar1 = new javax.swing.JButton();
+        jButtonLogin1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Home");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 110, 40));
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Daftar");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 110, 40));
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Login");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 110, 40));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 21)); // NOI18N
         jLabel4.setText("Password");
@@ -94,7 +79,34 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 630, 90, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikasipendaftaran/login.jpg"))); // NOI18N
+        jButtonHome1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonHome1.setText("Home");
+        jButtonHome1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHome1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonHome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 100, 40));
+
+        jButtonDaftar1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonDaftar1.setText("Daftar");
+        jButtonDaftar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDaftar1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonDaftar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 100, 40));
+
+        jButtonLogin1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonLogin1.setText("Login");
+        jButtonLogin1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLogin1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonLogin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 100, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikasipendaftaran/Gambar/login.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1240, 830));
 
         pack();
@@ -121,6 +133,18 @@ public class Login extends javax.swing.JFrame {
         Pass.setText("");
         NIM.setText("");
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButtonHome1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHome1ActionPerformed
+        new Home().setVisible(true);
+    }//GEN-LAST:event_jButtonHome1ActionPerformed
+
+    private void jButtonDaftar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDaftar1ActionPerformed
+        new Daftar().setVisible(true);
+    }//GEN-LAST:event_jButtonDaftar1ActionPerformed
+
+    private void jButtonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogin1ActionPerformed
+        new Login().setVisible(true);
+    }//GEN-LAST:event_jButtonLogin1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,11 +185,11 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JTextField NIM;
     private javax.swing.JPasswordField Pass;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButtonDaftar1;
+    private javax.swing.JButton jButtonHome1;
+    private javax.swing.JButton jButtonLogin1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
 }

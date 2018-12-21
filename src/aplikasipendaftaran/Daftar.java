@@ -27,32 +27,17 @@ public class Daftar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButtonLihatPendaftar = new javax.swing.JButton();
+        jButtonDaftar = new javax.swing.JButton();
+        jButtonHome1 = new javax.swing.JButton();
+        jButtonDaftar1 = new javax.swing.JButton();
+        jButtonLogin1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Home");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 110, 40));
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Daftar");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 110, 40));
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Login");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 110, 40));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -64,26 +49,53 @@ public class Daftar extends javax.swing.JFrame {
         jLabel7.setText("Pendaftaran Mahasiswa Baru");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 570, 330, 50));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jButton1.setText("Lihat Pendaftar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonLihatPendaftar.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jButtonLihatPendaftar.setText("Lihat Pendaftar");
+        jButtonLihatPendaftar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonLihatPendaftarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 630, 170, 40));
+        getContentPane().add(jButtonLihatPendaftar, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 630, 170, 40));
 
-        jButton2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jButton2.setText("Daftar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonDaftar.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jButtonDaftar.setText("Daftar");
+        jButtonDaftar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonDaftarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 630, 90, 40));
+        getContentPane().add(jButtonDaftar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 630, 90, 40));
+
+        jButtonHome1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonHome1.setText("Home");
+        jButtonHome1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHome1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonHome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 100, 40));
+
+        jButtonDaftar1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonDaftar1.setText("Daftar");
+        jButtonDaftar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDaftar1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonDaftar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 100, 40));
+
+        jButtonLogin1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonLogin1.setText("Login");
+        jButtonLogin1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLogin1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonLogin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 100, 40));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikasipendaftaran/daftar.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikasipendaftaran/Gambar/daftar.jpg"))); // NOI18N
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -91,13 +103,25 @@ public class Daftar extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jButtonLihatPendaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLihatPendaftarActionPerformed
+        new DataMahasiswaTerdaftar().setVisible(true);
+    }//GEN-LAST:event_jButtonLihatPendaftarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void jButtonDaftarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDaftarActionPerformed
+        new FormDaftar().setVisible(true);
+    }//GEN-LAST:event_jButtonDaftarActionPerformed
+
+    private void jButtonHome1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHome1ActionPerformed
+        new Home().setVisible(true);
+    }//GEN-LAST:event_jButtonHome1ActionPerformed
+
+    private void jButtonDaftar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDaftar1ActionPerformed
+        new Daftar().setVisible(true);
+    }//GEN-LAST:event_jButtonDaftar1ActionPerformed
+
+    private void jButtonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogin1ActionPerformed
+        new Login().setVisible(true);
+    }//GEN-LAST:event_jButtonLogin1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -135,13 +159,13 @@ public class Daftar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButtonDaftar;
+    private javax.swing.JButton jButtonDaftar1;
+    private javax.swing.JButton jButtonHome1;
+    private javax.swing.JButton jButtonLihatPendaftar;
+    private javax.swing.JButton jButtonLogin1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
 }

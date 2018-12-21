@@ -32,9 +32,6 @@ public class FormDaftar extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroup2 = new javax.swing.ButtonGroup();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -51,25 +48,13 @@ public class FormDaftar extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextAreaAlamat = new javax.swing.JTextArea();
         jButtonDaftar = new javax.swing.JButton();
+        jButtonHome1 = new javax.swing.JButton();
+        jButtonDaftar1 = new javax.swing.JButton();
+        jButtonLogin1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setText("Home");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 110, 40));
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Daftar");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 110, 40));
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Login");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 110, 40));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Semibold", 0, 21)); // NOI18N
         jLabel3.setText("Nama");
@@ -166,6 +151,33 @@ public class FormDaftar extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonDaftar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 720, 90, 40));
 
+        jButtonHome1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonHome1.setText("Home");
+        jButtonHome1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHome1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonHome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 100, 40));
+
+        jButtonDaftar1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonDaftar1.setText("Daftar");
+        jButtonDaftar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDaftar1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonDaftar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 100, 40));
+
+        jButtonLogin1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonLogin1.setText("Login");
+        jButtonLogin1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLogin1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonLogin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 100, 40));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikasipendaftaran/Gambar/form daftar.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 0, -1, 830));
 
@@ -212,6 +224,18 @@ public class FormDaftar extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonTambahActionPerformed
 
+    private void jButtonHome1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHome1ActionPerformed
+        new Home().setVisible(true);
+    }//GEN-LAST:event_jButtonHome1ActionPerformed
+
+    private void jButtonDaftar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDaftar1ActionPerformed
+        new Daftar().setVisible(true);
+    }//GEN-LAST:event_jButtonDaftar1ActionPerformed
+
+    private void jButtonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogin1ActionPerformed
+        new Login().setVisible(true);
+    }//GEN-LAST:event_jButtonLogin1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -250,6 +274,9 @@ public class FormDaftar extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton jButtonDaftar;
+    private javax.swing.JButton jButtonDaftar1;
+    private javax.swing.JButton jButtonHome1;
+    private javax.swing.JButton jButtonLogin1;
     private javax.swing.JButton jButtonTambah;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
@@ -257,11 +284,8 @@ public class FormDaftar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane2;

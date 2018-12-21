@@ -28,6 +28,9 @@ public class DataLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel7 = new javax.swing.JLabel();
+        jButtonHome1 = new javax.swing.JButton();
+        jButtonDaftar1 = new javax.swing.JButton();
+        jButtonLogin1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -38,11 +41,50 @@ public class DataLogin extends javax.swing.JFrame {
         jLabel7.setText("Data Mahasiswa");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, 330, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikasipendaftaran/data mahasiswa.jpg"))); // NOI18N
+        jButtonHome1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonHome1.setText("Home");
+        jButtonHome1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHome1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonHome1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 100, 40));
+
+        jButtonDaftar1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonDaftar1.setText("Daftar");
+        jButtonDaftar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDaftar1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonDaftar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 100, 40));
+
+        jButtonLogin1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonLogin1.setText("Login");
+        jButtonLogin1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLogin1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonLogin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 100, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/aplikasipendaftaran/Gambar/data mahasiswa.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1240, 830));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonHome1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHome1ActionPerformed
+        new Home().setVisible(true);
+    }//GEN-LAST:event_jButtonHome1ActionPerformed
+
+    private void jButtonDaftar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDaftar1ActionPerformed
+        new Daftar().setVisible(true);
+    }//GEN-LAST:event_jButtonDaftar1ActionPerformed
+
+    private void jButtonLogin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLogin1ActionPerformed
+        new Login().setVisible(true);
+    }//GEN-LAST:event_jButtonLogin1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -80,6 +122,9 @@ public class DataLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonDaftar1;
+    private javax.swing.JButton jButtonHome1;
+    private javax.swing.JButton jButtonLogin1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel7;
     // End of variables declaration//GEN-END:variables
